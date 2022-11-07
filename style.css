@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&family=Overpass&family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /*Primary*/
+
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+
+  /*Neutral*/
+
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+
+  /*Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.body {
+  width: 100%;
+  height: auto;
+}
+main {
+  display: flex;
+}
+.wrapper-1 {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 3.125rem;
+  padding-left: 9.375rem;
+}
+.mobile {
+  display: none;
+}
+.title {
+  margin-top: 8.125rem;
+  margin-bottom: 1.25rem;
+}
+.title p {
+  font-size: 3.125rem;
+  letter-spacing: 0.625rem;
+  font-family: Josefin Sans;
+}
+.title .first {
+  color: var(--DesaturatedRed);
+  font-weight: 300;
+}
+
+.text p {
+  font-family: Josefin Sans;
+  font-size: 1rem;
+  margin-right: 10.625rem;
+  line-height: 1.875rem;
+  color: var(--DesaturatedRed);
+}
+
+.text {
+  margin-bottom: 30px;
+}
+.email {
+  border: 1px solid var(--DesaturatedRed);
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 2.5rem;
+}
+.email input {
+  border: none;
+  width: 80%;
+  margin-left: 1.25rem;
+}
+.email button {
+  position: relative;
+  top: -1px;
+  left: 4px;
+  width: 17%;
+  height: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5625rem;
+  border: none;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.email input::placeholder {
+  color: var(--DesaturatedRed);
+  font-weight: 300;
+}
+.email img {
+  width: 20%;
+  height: 40%;
+}
+.email-false {
+  color: var(--SoftRed);
+  margin-top: 0.625rem;
+  margin-left: 0.625rem;
+  display: none;
+}
+.icon-false {
+  margin-top: 0.625rem;
+  margin-right: 0.625rem;
+}
+.email .icon-false {
+  width: 1.875rem;
+  display: none;
+}
+.wrapper-2 img {
+  width: 46.25rem;
+  height: 46.625rem;
+}
+@media screen and (max-width: 900px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper-2 {
+    display: none;
+  }
+  .mobile {
+    display: block;
+
+    margin: 0 auto;
+  }
+  .wrapper-1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 1.25rem;
+  }
+  .logo {
+    margin-left: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+  .title {
+    margin: 0 auto;
+    margin-top: 50px;
+
+    text-align: center;
+  }
+  .text p {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 15px;
+  }
+  .email {
+    margin: 0 auto;
+  }
+}
